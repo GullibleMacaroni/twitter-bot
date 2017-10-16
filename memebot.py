@@ -73,7 +73,7 @@ def get_media(img_url, post_id):
 def tweet_creator(subreddit_info):
 	post_dict = {}
 	print ('[BOT] Getting posts from Reddit')
-	for submission in subreddit_info.hot(limit=20):
+	for submission in subreddit_info.hot(limit=10000):
 		# If the OP has deleted his account, save it as "a deleted user"
 		if submission.author is None:
 			submission.author = "a deleted user"
